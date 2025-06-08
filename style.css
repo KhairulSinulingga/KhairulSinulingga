@@ -1,0 +1,190 @@
+/* Styling Umum untuk Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* Warna latar belakang lembut */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Memastikan footer di bawah */
+}
+
+/* Styling Header */
+header {
+    background: linear-gradient(to right, #ff0400, #0080b3); /* Gradien biru */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Jarak antar elemen */
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Membuat gambar bulat */
+    object-fit: cover; /* Memastikan gambar mengisi area */
+    border: 5px solid #fff; /* Border putih di sekitar foto */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Bayangan pada foto */
+}
+
+header h1 {
+    margin: 10px 0 5px;
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #e6e6e6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling Main Content */
+main {
+    flex: 1; /* Memungkinkan main content mengisi ruang yang tersisa */
+    padding: 25px;
+    max-width: 960px; /* Lebar maksimum konten */
+    margin: 25px auto; /* Pusatkan konten */
+    display: grid;
+    grid-template-columns: 1fr; /* Satu kolom secara default */
+    gap: 30px; /* Jarak antar bagian */
+}
+
+/* Styling Kartu (Card) untuk Setiap Bagian */
+.card {
+    background-color: #fff;
+    border-radius: 12px; /* Sudut membulat */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Bayangan lebih halus */
+    padding: 30px;
+    transition: transform 0.3s ease-in-out; /* Efek hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Sedikit naik saat dihover */
+}
+
+.card h2 {
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.card ul {
+    list-style: none; /* Hilangkan bullet default */
+    padding: 0;
+}
+
+.card ul li {
+    margin-bottom: 12px;
+    font-size: 1.15em;
+    display: flex;
+    align-items: center;
+}
+
+.card ul li strong {
+    color: #555;
+    min-width: 120px; /* Memberikan lebar minimum untuk label */
+}
+
+.card a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.card a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Styling Skill Tags */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap; /* Membungkus skill ke baris baru jika tidak cukup */
+    gap: 12px; /* Jarak antar tag */
+    justify-content: center; /* Pusatkan tag skill */
+}
+
+.skill-tag {
+    background-color: #e3f2fd; /* Warna latar belakang tag */
+    color: #1976d2; /* Warna teks tag */
+    padding: 10px 18px;
+    border-radius: 25px; /* Membuat tag sangat membulat */
+    font-weight: bold;
+    font-size: 1em;
+    border: 1px solid #90caf9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: #bbdefb;
+}
+
+/* Styling Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #212529; /* Warna gelap untuk footer */
+    color: #eee;
+    margin-top: 40px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+}
+
+/* Responsive Design untuk Layar Lebih Besar */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr; /* Dua kolom pada layar lebih besar */
+    }
+
+    #biodata {
+        grid-column: 1 / span 1; /* Biodata di kolom pertama */
+    }
+
+    #skills {
+        grid-column: 2 / span 1; /* Skill di kolom kedua */
+    }
+
+    #portfolio, #contact {
+        grid-column: 1 / span 2; /* Portofolio dan Kontak melebar penuh */
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    .card {
+        padding: 20px;
+    }
+    .card h2 {
+        font-size: 1.7em;
+    }
+    .card ul li {
+        font-size: 1em;
+    }
+    .skill-tag {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
